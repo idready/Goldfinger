@@ -1,0 +1,710 @@
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+
+/*** global rules ***/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+a,
+a:focus,
+a:active,
+button,
+button:active {
+	outline: none;
+}
+
+a:focus {
+	-moz-outline-style: none;
+}
+
+/*for FireFox*/
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+button[type="submit"]::-moz-focus-inner,
+button[type="button"]::-moz-focus-inner {
+	border : 0;
+}
+
+body {
+	background: url('../img/background.jpg') fixed repeat;
+	color: #F5F5F5;
+	font-family: 'Cabin Sketch';
+	font-size: 120%;
+	line-height: 1.4 !important;
+}
+
+/*** generic classes ***/
+
+.double_text {
+	position: relative;
+}
+
+.color_wh {
+	color: #ffffff;
+}
+
+.nice_blue {
+	color: #2087f0;
+}
+
+.nice_green {
+	color: #008000;
+}
+
+.error {
+	color: #FF0000
+}
+
+.center_inner {
+	margin: 0 auto;
+	width: 80%;
+}
+
+/* ============================= */
+/* ! Header   */
+/* ============================= */
+
+header {
+	margin: 25px auto 0;
+}
+
+.container header h1+p {
+	color: #FFF;
+	font-size: 25px;
+	font-style: normal;
+  	font-weight: 400;
+}
+
+.container header h1+p {
+	color: #FFF;
+	top: 0;
+}
+
+/* ============================= */
+/* ! Body   */
+/* ============================= */
+
+.container #master_piece {
+	height: 295px;
+}
+
+
+/****** Main paage ******/
+
+#users {
+	margin-top: 35px;
+}
+
+#users > p{
+	font-size: 2em;
+	margin-top: 30px;
+}
+
+.single_user {
+	margin: 45px 0 15px 0;
+}
+
+/****** User paage ******/
+
+.user {
+	position: relative;
+}
+
+.user > a {
+	padding: 10px 10px 0;
+	position: relative;
+}
+
+.user .edit-user {
+	background-color: #666666;
+	height: 183px;
+	left: 0;
+	opacity: 0.7;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+	-moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+	position: absolute;
+	top:0;
+	width: 100%;
+
+	display: none;
+}
+
+/* avatar */
+
+.user_avatar {
+	background-color: #FFFFFF;
+	border: 4px solid white;
+	-khtml-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-ms-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-o-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-moz-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-webkit-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	height: 150px;
+	margin: 0 15px 15px 0;
+	width: 150px;
+}
+
+.user_avatar > img {
+	height: 150px;
+	width: 150px;
+}
+
+.user_avatar + span {
+	padding-top: 10px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.profil_sep {
+	margin: 7px 0;
+	/*background: url('../img/profil_sep');
+	height: 10px;
+	margin: 7px;
+	width: 569px;*/
+}
+
+/* count */
+#count {
+	margin: 15px 0;
+}
+
+#count .total {
+	font-size: 59px;
+}
+
+#count .total+p {
+	color: #FFF;
+	font-size: 18px;
+}
+
+.sub_title {
+	font-size: 18px;
+}
+
+/* days */
+
+.day {
+	margin: 7px 0;
+}
+
+.day .day_arrow {
+	margin: 0 7px 0 0;
+}
+
+.day .day_arrow,
+.day .date {
+	position: relative;
+	left: 5px;
+}
+
+.day .day_arrow,
+.day .date,
+.day .sum_golfingers {
+	font-size: 29px;
+}
+
+.day .sum_golfingers {
+	float: right;
+}
+
+/* fingers */
+
+#add_finger_count > a:hover {
+	color: #2087f0;
+}
+
+.goldfinger_picto {
+	background: url('../img/goldfinger_picto.png') no-repeat;
+	display: inline-block;
+	*display: inline; /* Hack IE7 */
+	height: 32px;
+	width: 29px;
+	zoom: 1;
+}
+
+.lapinou_picto {
+	background: url('../img/lapinou_picto.png') no-repeat;
+	display: inline-block;
+	*display: inline; /* Hack IE7 */
+	height: 32px;
+	width: 32px;
+	zoom: 1;
+}
+
+.edit_fingers_count_picto {
+	background: url('../img/edit_fingers_count_picto_03.png') no-repeat;
+	display: inline-block;
+	*display: inline; /* Hack IE7 */
+	height: 35px;
+	width: 15px;
+	zoom: 1;
+}
+
+.more_fingers {
+	margin: 20px 0;
+}
+
+.more_fingers > a {
+	color: #FFF;
+	font-size: 18px;
+}
+
+
+/****** Admin paage ******/
+
+#current_fingers_count,
+#add_finger_count {
+	font-size: 59px;
+}
+
+#current_fingers_count {
+	margin: 65px 0;
+}
+
+/*#add_finger_count {
+	margin: 0 0 40px;
+}*/
+
+
+/****** User create paage ******/
+
+#log_user,
+#create_user {
+	background-color: #ffffff;
+	border: 4px solid white;
+	display: inline-block;
+	*display: inline;
+	-khtml-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-ms-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-o-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-moz-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-webkit-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	margin: 25px 0 5px 0;
+	padding: 30px 25px 15px;
+	zoom: 1;
+}
+
+.form_info_block {
+	margin: 0 0 10px;
+}
+
+.form_info_block label {
+	color: #2F2E2D;
+	text-align: left;
+	width: 100px;
+}
+
+.form_info_block input {
+	border: 1px solid #C0C0C0;
+	padding: 5px 0px 5px 5px;
+}
+
+.form_info_block input[type="submit"] {
+	background: linear-gradient(top bottom, #f5f5f5, #b7b7b7);
+	margin: 5px 0 0;
+	padding: 3px 5px;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+	        border-radius:3px;
+	width: 106px;
+}
+
+.form_info_block input[type="submit"]:hover {
+	background: linear-gradient(bottom top, #f5f5f5, #b7b7b7);
+	-khtml-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-ms-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-o-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-moz-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	-webkit-box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+	box-shadow:rgba(0,0,0,0.3) 1px  1px 2px;
+}
+
+#create_user input[type="file"] {
+	height: 21px;
+	font-size: 21px;
+	left: 100px;
+	opacity: 0;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	top: 0;
+	width: 203px;
+}
+
+
+/* ============================= */
+/* ! Generic Helper Classes   */
+/* ============================= */
+
+
+/* skins */
+
+.tac {
+	text-align: center;
+}
+
+.space_moutain {
+	margin-bottom: 15px;
+}
+
+.db {
+	display: block;
+}
+
+.dib {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+.di {
+	display: inline;
+}
+
+.dtc {
+	display: table-cell;
+}
+
+.dn {
+	display: none;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.pr {
+	position: relative;
+}
+
+.pa {
+	position: absolute;
+}
+
+
+/* ============================= */
+/* ! Footer   */
+/* ============================= */
+footer {
+	font-size: 19px;
+	margin: 60px 0 15px;
+	text-transform: uppercase;
+}
+
+
+/* ============================= */
+/* ! MEDIA QUERIES   */
+/* ============================= */
+
+
+/* ============================= */
+/* ! Layout for desktop   */
+/* ============================= */
+
+/* MEDIA QUERY: Desktop and up */
+@media screen and (min-width:1152px) {
+	/*body {
+		background: grey;
+	}*/
+}
+
+/* MEDIA QUERY: Widescreen and up */
+@media screen and (min-width:1280px) {
+	/*body {
+		background: green;
+	}*/
+}
+
+/* MEDIA QUERY: Smartphone only */
+@media screen and (max-width:835px) {
+	/*body {
+		background: purple;
+	}*/
+
+	.container header h1+p {
+		margin-top: 10px;
+	}
+}
+
+/* MEDIA QUERY: Smartphone only */
+@media screen and (max-width:815px) {
+	/*body {
+		background: green;
+	}*/
+
+	header .double_text .text_db:after {
+		top: -6px;
+	}
+}
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+/* MEDIA QUERY: Smartphone only */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-device-width : 321px) and (orientation:landscape) {
+/* Styles */
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-device-width : 320px) and (orientation:portrait) {
+/* Styles */
+
+}
+
+/* MEDIA QUERY: Smartphone only */
+@media screen and (min-width:764px) {
+
+	/*body {
+		background: black;
+	}*/
+	#add_finger_count {
+		font-size: 50px;
+	}
+}
+
+/* MEDIA QUERY: Smartphone only */
+@media screen and (max-width:759px) {
+
+	/*body {
+		background: orange;
+	}*/
+
+	.container header h1+p {
+		font-size: 22px;
+	}
+
+	#count .total {
+		font-size: 53px;
+	}
+
+	#count .total+p {
+		color: #FFF;
+		font-size: 18px;
+	}
+
+	.sub_title {
+		font-size: 18px;
+	}
+
+	.day .day_arrow,
+	.day .date,
+	.day .sum_golfingers {
+		font-size: 23px;
+	}
+
+	.more_fingers > a {
+		color: #FFF;
+		font-size: 18px;
+	}
+}
+
+
+/* MEDIA QUERY: viewport <= .maxwidth */
+@media screen and (max-width:600px) {
+
+	/*body {
+		background: #545050;
+	}*/
+
+	.container header h1+p {
+		font-size: 19px;
+	}
+
+	#count .total {
+	font-size: 45px;
+	}
+
+	#count .total+p {
+		color: #FFF;
+		font-size: 18px;
+	}
+
+	.sub_title {
+		font-size: 18px;
+	}
+
+	#add_finger_count {
+		font-size: 40px;
+	}
+
+	#current_fingers_count {
+		font-size: 46px;
+	}
+
+	.day .day_arrow,
+	.day .date,
+	.day .sum_golfingers {
+		font-size: 19px;
+	}
+
+	.more_fingers > a {
+		color: #FFF;
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width:527px) {
+
+	.container header h1+p {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width:484px) {
+
+	.container header h1+p {
+		font-size: 14px;
+	}
+}
+
+
+@media screen and (max-width:423px) {
+
+	/*body {
+		background: blue;
+	}*/
+	/*header .double_text .text_db:after {
+		top: -1px;
+	}
+
+	header .double_text {
+		font-size: 60px !important;
+	}*/
+
+	.container header h1+p {
+		font-size: 19px;
+	}
+
+	#add_finger_count {
+		font-size: 35px;
+	}
+
+	.day {
+		margin: 0 0 5px;
+	}
+
+	.day .day_arrow,
+	.day .date {
+		position: relative;
+		top: 20px;
+	}
+
+	.day .day_arrow,
+	.day .date,
+	.day .sum_golfingers {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width:366px) {
+
+	#add_finger_count {
+		font-size: 26px;
+	}
+
+	.day {
+		border-bottom: 1px solid #FFF;
+		margin: 0 0 11px;
+	}
+
+	.day .day_arrow,
+	.day .date {
+		top: 0;
+	}
+
+	.day .sum_golfingers {
+		display: block;
+		float: none;
+	}
+}
+
+@media screen and (max-device-width : 320px) {
+/* Styles */
+	/*body {
+		background: red;
+	}*/
+}
+
+/* MEDIA QUERY: Tablet portrait only
+- Apple iPad - Portrait (768px width)
+
+Excluding Samsung Galaxy Tab - Portrait (because of 600px width)
+*/
+@media screen and (min-width:760px) and (max-width:1024px) and (orientation:portrait) {
+
+	/*body {
+		background: purple;
+	}*/
+}
+
+/* MEDIA QUERY: Netbook and tablet landscape and up
+- Samsung Galaxy Tab - Portrait (1024px width)
+- Apple iPad - Portrait (1024px width)
+- Netbooks
+*/
+@media screen and (min-width: 1024px), screen and (min-width: 760px) and (orientation:landscape) {
+
+}
+
+/* MEDIA QUERY: Tablet portrait only
+- Galaxy Tab - Portrait (800px width) *** Latest Version of galaxy tab ***
+*/
+@media screen and (min-width:800px) and (max-width:1280px) and (orientation:portrait) {
+
+}
+
+/* MEDIA QUERY: Netbook and tablet landscape and up
+- Apple iPad - Portrait (1280px width) *** Latest Version of galaxy tab ***
+*/
+@media screen and (min-width: 1280px), screen and (min-width: 800px) and (orientation:landscape) {
+
+}
+
+/*@media handheld, only screen and (max-width: 769px) {
+
+	body {
+
+	}
+
+}*/
+
+
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+/*	.logo {
+		background: url(logo2x.jpg) no-repeat;
+		background-size: 212px 303px;
+	}*/
+
+}
