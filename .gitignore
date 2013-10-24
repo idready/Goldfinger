@@ -1,0 +1,18 @@
+# Forbidden extensions
+.project
+.buildpath
+.vagrant
+.directory
+.settings/
+*.livereload
+*.inc.php
+*.sql
+*.md
+
+
+# Database
+db_dump/*
+ressources/*
+doc/*
+log/*
+conf/*
