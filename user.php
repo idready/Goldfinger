@@ -26,12 +26,6 @@
             header('location:www.google.fr');
        }
 
-        if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'dev.goldfinger.fr') {
-            $base_url = 'http://' . $_SERVER['SERVER_NAME']. ':' .$_SERVER['SERVER_PORT'];
-        } else {
-            $base_url = 'http://' . 'irie-design.fr/goldfinger';
-        }
-
     // no user send
     } else {
         header('location:index.php');
@@ -85,7 +79,7 @@
                     <div class="tac row">
                         <div class="twelvecol header tac">
                             <h1 class="logo">
-                                <a href="<?php echo $base_url; ?>">
+                                <a href="http://<?php echo CURRENT_BASE_URL; ?>">
                                     <img src="img/goldfinger_logo.png" alt="goldfinger logo">
                                 </a>
                             </h1>
@@ -100,7 +94,7 @@
                     <script type="text/javascript">
                     //<![CDATA[
                        var user =  <?php echo $_user['user_id'] ?>;
-                       var base_url = '<?php if ($_SERVER['SERVER_NAME'] != 'localhost') { echo $_SERVER['SERVER_NAME'] . '/goldfinger'; }  ?>' + '';
+                       var base_url = 'http://<?php echo CURRENT_BASE_URL; ?>';
                     //]]>
                     </script>
                     <div class="row">
