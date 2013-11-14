@@ -708,3 +708,33 @@ Excluding Samsung Galaxy Tab - Portrait (because of 600px width)
 	}*/
 
 }
+
+
+
+/* ============================= */
+/* ! OVERLAY   */
+/* ============================= */
+
+html, body{
+ 	min-height: 100%;
+}
+
+.modal {
+	background-color: transparent;
+	height: 58px;
+	left: 50%;
+	margin-left: -61px;
+	margin-top: -29px;
+	position: fixed;
+	top: 50%;
+	width: 123px;
+}
+
+.modal::backdrop {
+	background-color: rgba(0,0,0,0.5);
+	bottom: 0;
+	left: 0;
+  	position: fixed;
+  	right: 0;
+  	top: 0;
+}
