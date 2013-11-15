@@ -60,9 +60,11 @@
 
         <!-- Add your site or application content here -->
         <!-- Overlay -->
-        <dialog class="modal">
-            <i class="fa-li fa fa-spinner fa-spin fa-3x"></i>
-        </dialog>
+        <div class="overlay">
+            <dialog class="modal">
+                <i class="fa-li fa fa-spinner fa-spin fa-3x"></i>
+            </dialog>
+        </div>
         <div id="wrapper">
             <div class="container">
                 <!-- Header -->
