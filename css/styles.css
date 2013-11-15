@@ -750,8 +750,9 @@ html, body{
 
 .modal.transition1 {
 	top:50%;
-	transition: top 1s, -webkit-transform 1s;
 
 	-webkit-transition: top 1s, -webkit-transform 1s;
 	-moz-transition: top 1s, -webkit-transform 1s;
+	-o-transition: top 1s, -webkit-transform 1s;
+	transition: top 1s, -webkit-transform 1s;
 }
