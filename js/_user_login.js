@@ -20,7 +20,7 @@ jQuery.noConflict();
           // success
           if (results.result) {
             // redirect to users edit
-            window.location.href = 'http://' + base_url;
+            window.location.href = base_url;
           }
 
         },

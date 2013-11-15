@@ -708,3 +708,51 @@ Excluding Samsung Galaxy Tab - Portrait (because of 600px width)
 	}*/
 
 }
+
+
+
+/* ============================= */
+/* ! OVERLAY   */
+/* ============================= */
+
+html, body{
+ 	min-height: 100%;
+}
+
+.overlay {
+	background-color: rgba(0,0,0,0.8);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.modal {
+	background-color: transparent;
+	height: 58px;
+	left: 50%;
+	margin-left: 61px;
+	margin-top: -29px;
+	position: fixed;
+	top: 0%;
+	width: 123px;
+	z-index: 11; /* 1px higher than the overlay layer */
+}
+
+.modal .fa-spin {
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+.modal.transition1 {
+	top:50%;
+
+	-webkit-transition: top 1s, -webkit-transform 1s;
+	-moz-transition: top 1s, -webkit-transform 1s;
+	-o-transition: top 1s, -webkit-transform 1s;
+	transition: top 1s, -webkit-transform 1s;
+}

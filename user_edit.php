@@ -6,27 +6,17 @@
     // store some useful information for reuse and avoid useless calls on db
     session_start();
 
-    // TODO : do all of this in a class or maybe the helper
     // load the user
-    define('DS', DIRECTORY_SEPARATOR);
-    define('PS', PATH_SEPARATOR);
-    define('BP', dirname(dirname(__FILE__)));
-
-    if ($_SERVER['DOCUMENT_ROOT'] != (DS. 'var' .DS. 'www')) {
-        $_real_path = $_SERVER['DOCUMENT_ROOT'] .DS. 'goldfinger' .DS;
-    } else {
-        $_real_path = $_SERVER['DOCUMENT_ROOT'] .DS;
-    }
-
+    require_once('_ajax/define_path.php');
 
     require_once($_real_path. '_ajax/cnx.php');
 
     if (isset($_GET['user'])) {
 
-       $data = array('user_name' => strtolower(htmlentities($_GET['user'])) ) ;
-       $sql_user = 'SELECT user_id, user_picto FROM user WHERE user_name = :user_name LIMIT 1';
-       $_req = $pdo->prepare($sql_user);
-       $_req->execute($data);
+        $data = array('user_name' => strtolower(htmlentities($_GET['user'])) ) ;
+        $sql_user = 'SELECT user_id, user_picto FROM user WHERE user_name = :user_name LIMIT 1';
+        $_req = $pdo->prepare($sql_user);
+        $_req->execute($data);
 
         if ($_req->rowCount($sql_user) < 1) {
 
@@ -46,12 +36,6 @@
         // only admin allowed
         if (!isset($_SESSION['is_user_logged'])) {
           header('location:index.php');
-        }
-
-        if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'dev.goldfinger.fr') {
-            $base_url = 'http://' . $_SERVER['SERVER_NAME']. ':' .$_SERVER['SERVER_PORT'];
-        } else {
-            $base_url = 'http://' . 'irie-design.fr/goldfinger';
         }
 
     // no user send
@@ -107,7 +91,7 @@
                     <div class="tac row">
                         <div class="twelvecol header tac">
                             <h1 class="logo">
-                                <a href="<?php echo $base_url . '/'; ?>">
+                                <a href="http://<?php echo CURRENT_BASE_URL; ?>">
                                     <img src="img/goldfinger_logo.png" alt="goldfinger logo">
                                 </a>
                             </h1>
@@ -122,7 +106,7 @@
                     <script type="text/javascript">
                     //<![CDATA[
                        var user =  <?php echo $_user['user_id'] ?>;
-                       var base_url = '<?php if ($_SERVER['SERVER_NAME'] != 'localhost') { echo $_SERVER['SERVER_NAME'] . '/goldfinger'; }  ?>' + '';
+                       var base_url = 'http://<?php echo CURRENT_BASE_URL; ?>';
                     //]]>
                     </script>
                     <div class="row">

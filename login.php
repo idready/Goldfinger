@@ -5,16 +5,12 @@
     // store some useful information for reuse and avoid useless calls on db
     session_start();
 
-    if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'dev.goldfinger.fr') {
-        $base_url = 'http://' . $_SERVER['SERVER_NAME']. ':' .$_SERVER['SERVER_PORT'];
-    } else {
-        $base_url = 'http://' . 'irie-design.fr/goldfinger';
-    }
+    require_once('_ajax/define_path.php');
 
     if (isset($_SESSION['is_user_logged'])) {
 
         if ($_SESSION['is_user_logged']) {
-            header('Location: http://'. $base_url);
+            header('Location: http://'. CURRENT_BASE_URL);
         }
     }
 ?>
@@ -66,7 +62,7 @@
                     <div class="tac row">
                         <div class="twelvecol header tac">
                             <h1 class="logo">
-                                <a href="<?php echo $base_url; ?>">
+                                <a href="http://<?php echo CURRENT_BASE_URL; ?>">
                                     <img src="img/goldfinger_logo.png" alt="goldfinger logo">
                                 </a>
                             </h1>
@@ -80,12 +76,7 @@
                 <section>
                     <script type="text/javascript">
                     //<![CDATA[
-                    <?php if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'dev.goldfinger.fr'){ ?>
-                        var base_url = '<?php echo $_SERVER['SERVER_NAME']. ':' .$_SERVER['SERVER_PORT']; ?>';
-                    <?php   } else { ?>
-                        var base_url = 'irie-design.fr/goldfinger';
-                    <?php   }
-                    ?>
+                       var base_url = 'http://<?php echo CURRENT_BASE_URL; ?>';
                     //]]>
                     </script>
                     <div class="row">

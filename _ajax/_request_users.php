@@ -62,6 +62,8 @@
             // in case user doesn't have fingers yet
             $_count_fingers = $_req_fingers->rowCount($_sql_fingers_count);
 
+            $_result[$_row_count]['finger_counter_count'] = 0;
+
             if ($_count_fingers < 1) {
 
                 $_result[$_row_count]['finger_counter_count'] = 0;
@@ -116,7 +118,7 @@
         return ($score1 > $score2) ? -1 : 1;
     }
 
-    usort($_result, compare_scores);
+    usort($_result, 'compare_scores');
     $_reversed_results = array_reverse($_result);
 
     // remove separator for last row

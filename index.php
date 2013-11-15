@@ -5,18 +5,17 @@
     // store some useful information for reuse and avoid useless calls on db
     session_start();
 
+    require_once('_ajax/define_path.php');
+
     if (isset($_SESSION['is_user_logged'])) {
 
         if ($_SESSION['is_user_logged']) {
             $_is_admin = true;
         }
+    } else {
+        $_is_admin = false;
     }
 
-    if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'dev.goldfinger.fr') {
-        $base_url = 'http://' . $_SERVER['SERVER_NAME']. ':' .$_SERVER['SERVER_PORT'];
-    } else {
-        $base_url = 'http://' . 'irie-design.fr/goldfinger';
-    }
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -46,6 +45,8 @@
         <!--[if IE]>        <link rel="stylesheet" href="css/vendor/ie.css"><![endif]-->
         <!-- Custom style -->
         <link rel="stylesheet" href="css/styles.css">
+        <!-- FontAwesome -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
         <meta name="description" content="" />
@@ -58,6 +59,12 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <!-- Overlay -->
+        <div class="overlay">
+            <dialog class="modal">
+                <i class="fa-li fa fa-spinner fa-spin fa-3x"></i>
+            </dialog>
+        </div>
         <div id="wrapper">
             <div class="container">
                 <!-- Header -->
@@ -65,7 +72,7 @@
                     <div class="tac row">
                         <div class="twelvecol header tac">
                             <h1 class="logo">
-                                <a href="<?php echo $base_url; ?>">
+                                <a href="http://<?php echo CURRENT_BASE_URL; ?>">
                                     <img src="img/goldfinger_logo.png" alt="goldfinger logo">
                                 </a>
                             </h1>
@@ -79,7 +86,7 @@
                 <section>
                     <script type="text/javascript">
                     //<![CDATA[
-                       var base_url = '<?php if ($_SERVER['SERVER_NAME'] != 'localhost') { echo $_SERVER['SERVER_NAME']; }  ?>' + '';
+                       var base_url = 'http://<?php echo CURRENT_BASE_URL; ?>';
                     //]]>
                     </script>
                     <div class="row">
@@ -88,7 +95,7 @@
                             <div id="users">
                                 {{#user}}
                                     <div class="user">
-                                        <a class="dib" href="<?php if ($_is_admin) { echo $base_url. '/user_edit'; } else { echo $base_url. '/user'; } ?>.php?user={{user_name}}" title="">
+                                        <a class="dib" href="http://<?php if ($_is_admin) { echo CURRENT_BASE_URL. '/user_edit'; } else { echo CURRENT_BASE_URL. '/user'; } ?>.php?user={{user_name}}" title="">
                                             <span class="user_avatar dib">
                                                 <img src="{{user_avatar}}" alt="" >
                                             </span>

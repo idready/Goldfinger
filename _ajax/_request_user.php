@@ -62,6 +62,8 @@
             // in case user doesn't have fingers yet
             $_count_fingers = $_req_fingers->rowCount($_sql_fingers_count);
 
+            $_result[$_row_count]['finger_counter_count'] = 0;
+            
             if ($_count_fingers < 1) {
 
                 $_result[$_row_count]['finger_counter_count'] = 0;
