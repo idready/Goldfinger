@@ -45,6 +45,8 @@
         <!--[if IE]>        <link rel="stylesheet" href="css/vendor/ie.css"><![endif]-->
         <!-- Custom style -->
         <link rel="stylesheet" href="css/styles.css">
+        <!-- FontAwesome -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
         <meta name="description" content="" />
@@ -57,6 +59,12 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <!-- Overlay -->
+        <div class="overlay">
+            <dialog class="modal">
+                <i class="fa-li fa fa-spinner fa-spin fa-3x"></i>
+            </dialog>
+        </div>
         <div id="wrapper">
             <div class="container">
                 <!-- Header -->
