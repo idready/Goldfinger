@@ -21,7 +21,7 @@
         if ($_req->rowCount($sql_user) < 1) {
 
             // fake user? who care kick him out mon
-            header('location:index.php');
+            header('location:'.CURRENT_BASE_URL);
         } else if ($_req->rowCount($sql_user) == 1){
 
             $result = $_req->fetch( PDO::FETCH_ASSOC );
@@ -35,12 +35,12 @@
 
         // only admin allowed
         if (!isset($_SESSION['is_user_logged'])) {
-          header('location:index.php');
+          header('location:'.CURRENT_BASE_URL);
         }
 
     // no user send
     } else {
-        header('location:index.php');
+        header('location:'.CURRENT_BASE_URL);
     }
 ?>
 
