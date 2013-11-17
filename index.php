@@ -59,12 +59,7 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <!-- Overlay -->
-        <div class="overlay">
-            <dialog class="modal">
-                <i class="fa-li fa fa-spinner fa-spin fa-3x"></i>
-            </dialog>
-        </div>
+        <?php require_once('_includes/overlay.php'); ?>
         <div id="wrapper">
             <div class="container">
                 <!-- Header -->

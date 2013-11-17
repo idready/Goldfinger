@@ -72,6 +72,7 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <?php require_once('_includes/overlay.php'); ?>
         <div id="wrapper">
             <div class="container">
                 <!-- Header -->

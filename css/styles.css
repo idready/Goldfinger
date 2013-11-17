@@ -721,7 +721,6 @@ html, body{
 
 .overlay {
 	background-color: rgba(0,0,0,0.8);
-	display: none;
 	height: 100%;
 	left: 0;
 	position: fixed;
@@ -749,11 +748,20 @@ html, body{
   animation: spin 2s infinite linear;
 }
 
-.modal.transition1 {
+.modal.loader-down {
 	top:50%;
 
-	-webkit-transition: top 1s, -webkit-transform 1s;
-	-moz-transition: top 1s, -webkit-transform 1s;
-	-o-transition: top 1s, -webkit-transform 1s;
-	transition: top 1s, -webkit-transform 1s;
+	-webkit-transition: top 0.5s, -webkit-transform 0.5s;
+	-moz-transition: top 0.5s, -webkit-transform 0.5s;
+	-o-transition: top 0.5s, -webkit-transform 0.5s;
+	transition: top 0.5s, -webkit-transform 0.5s;
+}
+
+.modal.loader-up {
+	top:0%;
+
+	-webkit-transition: top 0.5s, -webkit-transform 0.5s;
+	-moz-transition: top 0.5s, -webkit-transform 0.5s;
+	-o-transition: top 0.5s, -webkit-transform 0.5s;
+	transition: top 0.5s, -webkit-transform 0.5s;
 }
